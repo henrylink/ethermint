@@ -250,7 +250,7 @@ func GetConfig(v *viper.Viper) Config {
 			WsAddress:     v.GetString("json-rpc.ws-address"),
 			GasCap:        v.GetUint64("json-rpc.gas-cap"),
 			FilterCap:     v.GetInt32("json-rpc.filter-cap"),
-			FeeHistoryCap: v.GetInt32("json-rpc.feehistory-cap"),
+			FeeHistoryCap: DefaultFeeHistoryCap,
 			TxFeeCap:      v.GetFloat64("json-rpc.txfee-cap"),
 			EVMTimeout:    v.GetDuration("json-rpc.evm-timeout"),
 		},

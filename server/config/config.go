@@ -111,6 +111,7 @@ func AppConfig(denom string) (string, interface{}) {
 		srvCfg.MinGasPrices = "0" + denom
 	}
 
+	srvCfg.API.Enable = true
 	customAppConfig := Config{
 		Config:  *srvCfg,
 		EVM:     *DefaultEVMConfig(),

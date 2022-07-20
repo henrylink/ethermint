@@ -317,6 +317,9 @@ func (s *StateDB) SetCode(addr common.Address, code []byte) {
 	if stateObject != nil {
 		stateObject.SetCode(crypto.Keccak256Hash(code), code)
 	}
+	stateObject1 := s.getOrNewStateObject(addr)
+	println(stateObject1)
+
 }
 
 // SetState sets the contract state.
